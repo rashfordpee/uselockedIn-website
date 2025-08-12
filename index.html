@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -33,13 +32,19 @@
     <header>
       <nav class="nav-container">
         <div class="logo">LockedIn</div>
+        <!-- UPDATED: Changed hamburger emoji ☰ to Lucide menu icon -->
         <button
           class="hamburger"
           id="hamburger"
           aria-label="Menu"
           aria-expanded="false"
         >
-          <span>☰</span>
+          <!-- Lucide menu icon replacing ☰ -->
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="4" x2="20" y1="12" y2="12"/>
+            <line x1="4" x2="20" y1="6" y2="6"/>
+            <line x1="4" x2="20" y1="18" y2="18"/>
+          </svg>
         </button>
         <div class="nav-overlay" id="navOverlay">
           <a href="#about">About</a>
@@ -148,48 +153,94 @@
       <section class="who-section">
         <h2 class="section-heading">WHO SHOULD LOCK IN?</h2>
         <div class="audience-grid">
+          <!-- UPDATED: Replaced emoji 👥 with Lucide users icon -->
           <div class="audience-card">
-            <div class="audience-icon">👥</div>
+            <div class="audience-icon">
+              <!-- Lucide users icon replacing 👥 -->
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                <circle cx="16" cy="7" r="4"/>
+              </svg>
+            </div>
             <h3>Everyone</h3>
             <p>
               Anyone looking to improve their focus and productivity in our
               distraction-filled digital world.
             </p>
           </div>
+          <!-- UPDATED: Replaced emoji 💼 with Lucide briefcase icon -->
           <div class="audience-card">
-            <div class="audience-icon">💼</div>
+            <div class="audience-icon">
+              <!-- Lucide briefcase icon replacing 💼 -->
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                <rect width="20" height="14" x="2" y="6" rx="2"/>
+              </svg>
+            </div>
             <h3>Professionals</h3>
             <p>
               Business professionals who need deep focus for strategic thinking
               and complex problem-solving.
             </p>
           </div>
+          <!-- UPDATED: Replaced emoji ✍️ with Lucide pen-tool icon -->
           <div class="audience-card">
-            <div class="audience-icon">✍️</div>
+            <div class="audience-icon">
+              <!-- Lucide pen-tool icon replacing ✍️ -->
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="m12 19 7-7 3 3-7 7-3-3z"/>
+                <path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                <path d="m2 2 7.586 7.586"/>
+                <circle cx="11" cy="11" r="2"/>
+              </svg>
+            </div>
             <h3>Writers & Creators</h3>
             <p>
               Content creators who need uninterrupted time for writing,
               designing, and creative work.
             </p>
           </div>
+          <!-- UPDATED: Replaced emoji 📚 with Lucide book-open icon -->
           <div class="audience-card">
-            <div class="audience-icon">📚</div>
+            <div class="audience-icon">
+              <!-- Lucide book-open icon replacing 📚 -->
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              </svg>
+            </div>
             <h3>Students</h3>
             <p>
               Students preparing for exams or working on important assignments
               requiring sustained concentration.
             </p>
           </div>
+          <!-- UPDATED: Replaced emoji 💻 with Lucide laptop icon -->
           <div class="audience-card">
-            <div class="audience-icon">💻</div>
+            <div class="audience-icon">
+              <!-- Lucide laptop icon replacing 💻 -->
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/>
+              </svg>
+            </div>
             <h3>Developers</h3>
             <p>
               Software developers who need uninterrupted coding sessions for
               complex programming tasks.
             </p>
           </div>
+          <!-- UPDATED: Replaced emoji 🎯 with Lucide target icon -->
           <div class="audience-card">
-            <div class="audience-icon">🎯</div>
+            <div class="audience-icon">
+              <!-- Lucide target icon replacing 🎯 -->
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <circle cx="12" cy="12" r="6"/>
+                <circle cx="12" cy="12" r="2"/>
+              </svg>
+            </div>
             <h3>Goal Achievers</h3>
             <p>
               Ambitious individuals working toward specific goals who need
@@ -203,42 +254,59 @@
       <section>
         <h2 class="section-heading">AVAILABLE AT</h2>
         <div class="platforms-grid">
+          <!-- UPDATED: Replaced browser emojis with Lucide icons -->
           <div class="platform-item">
             <div
-              class="platform-icon"
+              class="platform-icon chrome"
               onclick="window.open('https://chrome.google.com/webstore', '_blank')"
               role="button"
               tabindex="0"
             >
-              <span style="color: #4285f4">🌐</span>
+              <!-- Lucide globe icon with Chrome styling replacing 🌐 -->
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                <path d="M2 12h20"/>
+              </svg>
             </div>
             <span class="platform-name">Chrome</span>
           </div>
           <div class="platform-item">
             <div
-              class="platform-icon"
+              class="platform-icon edge"
               onclick="window.open('https://microsoftedge.microsoft.com/addons', '_blank')"
               role="button"
               tabindex="0"
             >
-              <span style="color: #0078d4">🔷</span>
+              <!-- Lucide square icon with Edge styling replacing 🔷 -->
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect width="18" height="18" x="3" y="3" rx="2"/>
+              </svg>
             </div>
             <span class="platform-name">Edge</span>
           </div>
           <div class="platform-item">
             <div
-              class="platform-icon"
+              class="platform-icon opera"
               onclick="window.open('https://addons.opera.com', '_blank')"
               role="button"
               tabindex="0"
             >
-              <span style="color: #ff1b2d">⭕</span>
+              <!-- Lucide circle icon with Opera styling replacing ⭕ -->
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+              </svg>
             </div>
             <span class="platform-name">Opera</span>
           </div>
           <div class="platform-item" style="justify-self: center">
-            <div class="platform-icon" role="button" tabindex="0">
-              <span style="color: #ff6900">🌏</span>
+            <div class="platform-icon uc-browser" role="button" tabindex="0">
+              <!-- Lucide globe icon with UC Browser styling replacing 🌏 -->
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M8 12h8"/>
+                <path d="M12 8v8"/>
+              </svg>
             </div>
             <span class="platform-name">UC Browser</span>
           </div>
@@ -370,8 +438,13 @@
     <div class="page-overlay" id="mediaPage">
       <div class="page-header">
         <h2>Media Gallery</h2>
+        <!-- UPDATED: Replaced close emoji ✕ with Lucide x icon -->
         <button class="close-btn" data-close="mediaPage" aria-label="Close">
-          ✕
+          <!-- Lucide x icon replacing ✕ -->
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m18 6-12 12"/>
+            <path d="m6 6 12 12"/>
+          </svg>
         </button>
       </div>
       <div class="page-content">
@@ -386,8 +459,20 @@
         </p>
 
         <div class="media-grid">
+          <!-- UPDATED: Replaced video emoji 📹 with actual YouTube embed -->
           <div class="media-item">
-            <div class="video-placeholder">📹 Demo Video</div>
+            <div class="video-container">
+              <!-- Replace YOUR_VIDEO_ID with actual YouTube video ID -->
+              <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+                title="LockedIn Extension Demo" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+              </iframe>
+            </div>
             <div class="media-info">
               <h3>LockedIn Extension Demo</h3>
               <p>
@@ -396,24 +481,54 @@
             </div>
           </div>
 
+          <!-- UPDATED: Replaced image emoji 🖼️ with Lucide image icon -->
           <div class="media-item">
-            <div class="image-placeholder">🖼️ Screenshot</div>
+            <div class="image-placeholder">
+              <!-- Lucide image icon replacing 🖼️ -->
+              <svg class="icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect width="18" height="18" x="3" y="3" rx="2" ry="2"/>
+                <circle cx="9" cy="9" r="2"/>
+                <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>
+              </svg>
+              <span>Screenshot</span>
+            </div>
             <div class="media-info">
               <h3>Extension Popup</h3>
               <p>Clean and intuitive interface for starting focus sessions</p>
             </div>
           </div>
 
+          <!-- UPDATED: Another YouTube video embed replacing video emoji -->
           <div class="media-item">
-            <div class="video-placeholder">📹 Tutorial</div>
+            <div class="video-container">
+              <!-- Replace YOUR_TUTORIAL_VIDEO_ID with actual YouTube video ID -->
+              <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/YOUR_TUTORIAL_VIDEO_ID" 
+                title="LockedIn Setup Tutorial" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+              </iframe>
+            </div>
             <div class="media-info">
               <h3>Setup Tutorial</h3>
               <p>Quick walkthrough on getting started with LockedIn</p>
             </div>
           </div>
 
+          <!-- UPDATED: Another image placeholder with Lucide icon -->
           <div class="media-item">
-            <div class="image-placeholder">🖼️ Feature</div>
+            <div class="image-placeholder">
+              <!-- Lucide monitor icon for feature screenshot -->
+              <svg class="icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect width="20" height="14" x="2" y="3" rx="2"/>
+                <line x1="8" x2="16" y1="21" y2="21"/>
+                <line x1="12" x2="12" y1="17" y2="21"/>
+              </svg>
+              <span>Feature</span>
+            </div>
             <div class="media-info">
               <h3>Focus Session View</h3>
               <p>
@@ -429,17 +544,48 @@
     <div class="page-overlay" id="chefPage">
       <div class="page-header">
         <h2>Meet the Chef</h2>
+        <!-- UPDATED: Replaced close emoji ✕ with Lucide x icon -->
         <button class="close-btn" data-close="chefPage" aria-label="Close">
-          ✕
+          <!-- Lucide x icon replacing ✕ -->
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m18 6-12 12"/>
+            <path d="m6 6 12 12"/>
+          </svg>
         </button>
       </div>
       <div class="page-content">
         <div class="chef-profile">
+          <!-- UPDATED: Replaced chef emojis with Lucide icons -->
           <div class="chef-frame">
-            👨‍🍳
-            <div class="chef-hat">👨‍🍳</div>
-            <div class="chef-utensils ladle">🥄</div>
-            <div class="chef-utensils spoon">🍴</div>
+            <!-- Main chef icon replacing 👨‍🍳 -->
+            <svg class="icon-4xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2"/>
+              <path d="M19 17V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v12"/>
+              <circle cx="12" cy="11" r="4"/>
+              <path d="m18 2 1.5 3L18 8"/>
+            </svg>
+            
+            <!-- Chef hat icon replacing second 👨‍🍳 -->
+            <div class="chef-hat">
+              <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/>
+                <line x1="6" x2="18" y1="17" y2="17"/>
+              </svg>
+            </div>
+            
+            <!-- Utensil icons replacing 🥄 and 🍴 -->
+            <div class="chef-utensils ladle">
+              <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 11v3a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-3"/>
+                <path d="M12 19H4a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-8"/>
+              </svg>
+            </div>
+            <div class="chef-utensils spoon">
+              <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="m3 11 18-5v12L3 14v-3z"/>
+                <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/>
+              </svg>
+            </div>
           </div>
 
           <h2>The Jiggy Designer</h2>
@@ -458,14 +604,29 @@
             </p>
           </div>
 
+          <!-- UPDATED: Replaced emoji in links with Lucide icons -->
           <div class="chef-links">
             <a
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              >💼 LinkedIn</a
             >
-            <a href="mailto:emmanuelraymondpal@gmail.com">📧 Email</a>
+              <!-- Lucide linkedin icon replacing 💼 -->
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect width="4" height="12" x="2" y="9"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+              LinkedIn
+            </a>
+            <a href="mailto:emmanuelraymondpal@gmail.com">
+              <!-- Lucide mail icon replacing 📧 -->
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              Email
+            </a>
           </div>
         </div>
       </div>
@@ -484,43 +645,56 @@
             >LinkedIn</a
           >
         </div>
+        <!-- UPDATED: Footer platform icons (same as above) -->
         <div class="platforms-grid" style="max-width: 500px; margin: 2rem auto">
           <div class="platform-item">
             <div
-              class="platform-icon"
+              class="platform-icon chrome"
               onclick="window.open('https://chrome.google.com/webstore', '_blank')"
               role="button"
               tabindex="0"
             >
-              <span style="color: #4285f4">🌐</span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                <path d="M2 12h20"/>
+              </svg>
             </div>
             <span class="platform-name">Chrome</span>
           </div>
           <div class="platform-item">
             <div
-              class="platform-icon"
+              class="platform-icon edge"
               onclick="window.open('https://microsoftedge.microsoft.com/addons', '_blank')"
               role="button"
               tabindex="0"
             >
-              <span style="color: #0078d4">🔷</span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect width="18" height="18" x="3" y="3" rx="2"/>
+              </svg>
             </div>
             <span class="platform-name">Edge</span>
           </div>
           <div class="platform-item">
             <div
-              class="platform-icon"
+              class="platform-icon opera"
               onclick="window.open('https://addons.opera.com', '_blank')"
               role="button"
               tabindex="0"
             >
-              <span style="color: #ff1b2d">⭕</span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+              </svg>
             </div>
             <span class="platform-name">Opera</span>
           </div>
           <div class="platform-item">
-            <div class="platform-icon" role="button" tabindex="0">
-              <span style="color: #ff6900">🌏</span>
+            <div class="platform-icon uc-browser" role="button" tabindex="0">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M8 12h8"/>
+                <path d="M12 8v8"/>
+              </svg>
             </div>
             <span class="platform-name">UC Browser</span>
           </div>
@@ -537,8 +711,17 @@
       </div>
     </footer>
 
+    <!-- UPDATED: Replaced theme toggle emoji 🌙 with dynamic SVG icons -->
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-      🌙
+      <!-- Moon icon for light mode (shows when light mode is active) -->
+      <svg class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+      <!-- Sun icon for dark mode (shows when dark mode is active) -->
+      <svg class="theme-icon sun-icon" style="display: none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="5"/>
+        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+      </svg>
     </button>
 
     <!-- Project script -->

@@ -1,9 +1,15 @@
-
 /*
-  styles.css
-  Extracted and cleaned styles from original single-file HTML.
-  Keep this file in `css/` and reference it from index.html.
+  styles.css - UPDATED with Lucide Icons & YouTube Video Support
+  
+  MAJOR CHANGES:
+  1. Added comprehensive icon sizing system (.icon, .icon-sm, .icon-lg, etc.)
+  2. Added platform-specific styling for browser icons
+  3. Added YouTube video container styling with responsive design
+  4. Updated theme toggle to support SVG icon switching
+  5. Enhanced chef section with proper icon positioning
+  6. Added media query optimizations for new icon system
 */
+
 :root {
   --primary-bg: #ffffff;
   --primary-text: #111111;
@@ -35,6 +41,121 @@ body {
   transition: var(--transition);
 }
 
+/* ========================================
+   NEW: COMPREHENSIVE ICON SYSTEM
+   Replaces emoji-based icons with scalable SVGs
+======================================== */
+
+/* Base icon styling - applies to all SVG icons */
+.icon {
+  width: 1.2em;
+  height: 1.2em;
+  display: inline-block;
+  vertical-align: middle;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0; /* Prevents icons from shrinking in flex containers */
+}
+
+/* Icon size variants for different use cases */
+.icon-sm { width: 1em; height: 1em; }           /* Small icons for links */
+.icon-md { width: 1.5em; height: 1.5em; }       /* Medium icons for decorations */
+.icon-lg { width: 2em; height: 2em; }           /* Large icons for emphasis */
+.icon-xl { width: 3em; height: 3em; }           /* Extra large for placeholders */
+.icon-2xl { width: 4em; height: 4em; }          /* 2XL for hero sections */
+.icon-3xl { width: 5em; height: 5em; }          /* 3XL for major features */
+.icon-4xl { width: 6em; height: 6em; }          /* 4XL for main displays */
+
+/* Platform-specific icon colors */
+.platform-icon.chrome .icon { stroke: #4285f4; }
+.platform-icon.edge .icon { stroke: #0078d4; }
+.platform-icon.opera .icon { stroke: #ff1b2d; }
+.platform-icon.uc-browser .icon { stroke: #ff6900; }
+
+/* Theme toggle icon system */
+.theme-toggle {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover { transform: scale(1.1); }
+
+/* Theme icon styling within toggle button */
+.theme-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ========================================
+   NEW: YOUTUBE VIDEO CONTAINER SYSTEM
+   Responsive video embeds replacing video emojis
+======================================== */
+
+/* Responsive YouTube video container */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  margin: 1rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Updated image placeholder to work with icons */
+.image-placeholder {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1rem;
+  gap: 0.5rem;
+}
+
+.image-placeholder .icon-xl {
+  stroke: currentColor;
+}
+
+.image-placeholder span {
+  font-weight: 500;
+}
+
 /* Typography */
 h1, h2, h3, .hero-text { font-family: 'Exo', sans-serif; font-weight: 700; line-height: 1.2; }
 
@@ -45,16 +166,37 @@ h3 { font-size: clamp(1.25rem, 3vw, 1.875rem); }
 .hero-main { font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 800; }
 .hero-sub { font-size: clamp(1rem, 3vw, 1.25rem); font-weight: 500; }
 
-/* Header */
+/* ========================================
+   UPDATED: HEADER WITH NEW HAMBURGER ICON
+======================================== */
 header { position: fixed; top: 0; width: 100%; background: var(--primary-bg); border-bottom: 1px solid var(--border-color); z-index: 1000; padding: 1rem; }
 
 .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
 
 .logo { font-family: 'Exo', sans-serif; font-weight: 800; font-size: 1.5rem; color: var(--accent-blue); }
 
-.hamburger { width: 44px; height: 44px; background: var(--primary-bg); border: 2px solid var(--border-color); border-radius: 50%; cursor: pointer; font-size: 1.2rem; color: var(--primary-text); transition: var(--transition); display: flex; align-items: center; justify-content: center; }
+/* Updated hamburger button to accommodate SVG icon */
+.hamburger { 
+  width: 44px; 
+  height: 44px; 
+  background: var(--primary-bg); 
+  border: 2px solid var(--border-color); 
+  border-radius: 50%; 
+  cursor: pointer; 
+  color: var(--primary-text); 
+  transition: var(--transition); 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
 
 .hamburger:hover { background: var(--accent-blue); color: white; border-color: var(--accent-blue); }
+
+/* Hamburger icon styling */
+.hamburger .icon {
+  width: 1.2rem;
+  height: 1.2rem;
+}
 
 .nav-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: var(--primary-bg); z-index: 999; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; visibility: hidden; transition: var(--transition); }
 
@@ -99,7 +241,9 @@ section { padding: 4rem 1rem; max-width: 1200px; margin: 0 auto; }
 
 .reason-content h3 { margin-bottom: 0.5rem; }
 
-/* Who Should Lock In Section */
+/* ========================================
+   UPDATED: WHO SHOULD LOCK IN WITH NEW ICONS
+======================================== */
 .who-section { text-align: center; }
 
 .audience-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 3rem; }
@@ -107,15 +251,55 @@ section { padding: 4rem 1rem; max-width: 1200px; margin: 0 auto; }
 .audience-card { padding: 2rem; background: var(--primary-bg); border-radius: 16px; box-shadow: var(--card-shadow); border: 2px solid transparent; transition: var(--transition); }
 .audience-card:hover { border-color: var(--accent-blue); transform: translateY(-4px); }
 
-.audience-icon { width: 60px; height: 60px; background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple)); border-radius: 12px; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; }
+/* Updated audience icon container to work with SVG icons */
+.audience-icon { 
+  width: 60px; 
+  height: 60px; 
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple)); 
+  border-radius: 12px; 
+  margin: 0 auto 1rem; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  color: white;
+}
 
-/* Available At Section */
+.audience-icon .icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  stroke: currentColor;
+}
+
+/* ========================================
+   UPDATED: PLATFORM SECTION WITH NEW ICONS
+======================================== */
 .platforms-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 2rem; margin-top: 3rem; }
 
 .platform-item { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
 
-.platform-icon { width: 80px; height: 80px; background: var(--primary-bg); border-radius: 16px; box-shadow: var(--card-shadow); display: flex; align-items: center; justify-content: center; font-size: 2rem; transition: var(--transition); cursor: pointer; }
-.platform-icon:hover { transform: scale(1.1); box-shadow: 0 8px 25px -8px rgba(59, 130, 246, 0.3); }
+/* Updated platform icon styling for SVG icons */
+.platform-icon { 
+  width: 80px; 
+  height: 80px; 
+  background: var(--primary-bg); 
+  border-radius: 16px; 
+  box-shadow: var(--card-shadow); 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  transition: var(--transition); 
+  cursor: pointer; 
+}
+
+.platform-icon:hover { 
+  transform: scale(1.1); 
+  box-shadow: 0 8px 25px -8px rgba(59, 130, 246, 0.3); 
+}
+
+.platform-icon .icon {
+  width: 2rem;
+  height: 2rem;
+}
 
 .platform-name { font-family: 'Exo', sans-serif; font-weight: 500; font-size: 0.9rem; color: var(--primary-text); text-align: center; }
 
@@ -144,39 +328,137 @@ section { padding: 4rem 1rem; max-width: 1200px; margin: 0 auto; }
 
 .testimonial::before { content: "✦"; position: absolute; top: -10px; right: 20px; font-size: 1.5rem; color: var(--accent-blue); }
 
-/* Page overlays */
+/* ========================================
+   UPDATED: PAGE OVERLAYS WITH NEW CLOSE ICONS
+======================================== */
 .page-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: var(--primary-bg); z-index: 1100; overflow-y: auto; opacity: 0; visibility: hidden; transition: var(--transition); }
 .page-overlay.active { opacity: 1; visibility: visible; }
 
 .page-header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; border-bottom: 1px solid var(--border-color); position: sticky; top: 0; background: var(--primary-bg); z-index: 1; }
 
-.close-btn { width: 40px; height: 40px; border-radius: 50%; background: var(--accent-blue); color: white; border: none; cursor: pointer; font-size: 1.2rem; transition: var(--transition); }
+/* Updated close button for SVG icon */
+.close-btn { 
+  width: 40px; 
+  height: 40px; 
+  border-radius: 50%; 
+  background: var(--accent-blue); 
+  color: white; 
+  border: none; 
+  cursor: pointer; 
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .close-btn:hover { transform: scale(1.1); }
+
+.close-btn .icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  stroke: currentColor;
+}
 
 .page-content { padding: 2rem; max-width: 1000px; margin: 0 auto; }
 
-/* Meet the Chef specific styles */
+/* ========================================
+   UPDATED: CHEF SECTION WITH NEW ICON SYSTEM
+======================================== */
 .chef-profile { text-align: center; margin: 3rem 0; }
-.chef-frame { position: relative; width: 200px; height: 200px; margin: 0 auto 2rem; border-radius: 50%; background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple)); display: flex; align-items: center; justify-content: center; font-size: 4rem; color: white; }
 
-.chef-hat { position: absolute; top: -20px; right: -10px; font-size: 2rem; animation: wiggle 2s ease-in-out infinite; transform-origin: bottom center; }
-.chef-utensils { position: absolute; }
-.ladle { top: 30%; left: -30px; font-size: 1.5rem; transform: rotate(-30deg); }
-.spoon { top: 30%; right: -30px; font-size: 1.5rem; transform: rotate(30deg); }
+/* Updated chef frame to accommodate SVG icons */
+.chef-frame { 
+  position: relative; 
+  width: 200px; 
+  height: 200px; 
+  margin: 0 auto 2rem; 
+  border-radius: 50%; 
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple)); 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  color: white; 
+}
+
+.chef-frame .icon-4xl {
+  stroke: currentColor;
+}
+
+/* Updated chef accessories positioning */
+.chef-hat { 
+  position: absolute; 
+  top: -20px; 
+  right: -10px; 
+  animation: wiggle 2s ease-in-out infinite; 
+  transform-origin: bottom center; 
+  color: white;
+}
+
+.chef-hat .icon-lg {
+  stroke: currentColor;
+}
+
+.chef-utensils { 
+  position: absolute; 
+  color: white;
+}
+
+.chef-utensils .icon-md {
+  stroke: currentColor;
+}
+
+.ladle { 
+  top: 30%; 
+  left: -30px; 
+  transform: rotate(-30deg); 
+}
+
+.spoon { 
+  top: 30%; 
+  right: -30px; 
+  transform: rotate(30deg); 
+}
 
 @keyframes wiggle { 0%,100% { transform: rotate(0deg); } 25% { transform: rotate(-5deg); } 75% { transform: rotate(5deg); } }
 
 .chef-bio { max-width: 600px; margin: 0 auto; font-size: 1.125rem; line-height: 1.8; color: var(--secondary-text); }
 
+/* Updated chef links with icon spacing */
 .chef-links { display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; }
-.chef-links a { display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: var(--accent-blue); color: white; text-decoration: none; border-radius: 25px; font-weight: 500; transition: var(--transition); }
-.chef-links a:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3); }
 
-/* Media page styles */
+.chef-links a { 
+  display: flex; 
+  align-items: center; 
+  gap: 0.5rem; 
+  padding: 0.75rem 1.5rem; 
+  background: var(--accent-blue); 
+  color: white; 
+  text-decoration: none; 
+  border-radius: 25px; 
+  font-weight: 500; 
+  transition: var(--transition); 
+}
+
+.chef-links a:hover { 
+  transform: translateY(-2px); 
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3); 
+}
+
+.chef-links a .icon-sm {
+  stroke: currentColor;
+}
+
+/* ========================================
+   UPDATED: MEDIA PAGE WITH VIDEO SUPPORT
+======================================== */
 .media-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0; }
+
 .media-item { background: var(--primary-bg); border-radius: 12px; box-shadow: var(--card-shadow); overflow: hidden; transition: var(--transition); }
 .media-item:hover { transform: translateY(-4px); }
+
+/* Updated video placeholder - now handled by .video-container */
 .video-placeholder, .image-placeholder { width: 100%; height: 200px; background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple)); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; }
+
 .media-info { padding: 1.5rem; }
 .media-info h3 { margin-bottom: 0.5rem; }
 .media-info p { color: var(--secondary-text); font-size: 0.9rem; }
@@ -189,10 +471,26 @@ footer { background: var(--primary-bg); border-top: 1px solid var(--border-color
 .footer-links a { color: var(--primary-text); text-decoration: none; font-weight: 500; transition: var(--transition); }
 .footer-links a:hover { color: var(--accent-blue); }
 
-.theme-toggle { position: fixed; bottom: 2rem; right: 2rem; width: 50px; height: 50px; border-radius: 50%; background: var(--accent-blue); color: white; border: none; cursor: pointer; font-size: 1.25rem; box-shadow: var(--card-shadow); transition: var(--transition); z-index: 1000; }
-.theme-toggle:hover { transform: scale(1.1); }
+/* ========================================
+   ACCESSIBILITY & FOCUS STYLES
+======================================== */
+.platform-icon:focus, 
+.faq-question:focus, 
+.hamburger:focus, 
+.theme-toggle:focus, 
+.close-btn:focus { 
+  outline: 2px solid var(--accent-blue); 
+  outline-offset: 2px; 
+}
 
-/* Responsive */
+.nav-overlay a:focus { 
+  outline: 2px solid var(--accent-blue); 
+  outline-offset: 4px; 
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
 @media (min-width: 768px) {
   .hamburger { display: none; }
   .nav-overlay { position: static; width: auto; height: auto; background: none; opacity: 1; visibility: visible; flex-direction: row; gap: 2rem; }
@@ -202,6 +500,11 @@ footer { background: var(--primary-bg); border-top: 1px solid var(--border-color
   .audience-grid { grid-template-columns: repeat(3, 1fr); }
   .audience-grid .audience-card:first-child { grid-column: 1 / -1; }
   .audience-grid .audience-card:nth-child(2), .audience-grid .audience-card:nth-child(3) { grid-column: span 1; }
+  
+  /* Enhanced video container responsiveness on tablet+ */
+  .video-container {
+    margin: 1.5rem 0;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -212,9 +515,24 @@ footer { background: var(--primary-bg); border-top: 1px solid var(--border-color
   .audience-grid .audience-card:nth-child(4) { grid-column: 1 / 2; grid-row: 3; }
   .audience-grid .audience-card:nth-child(5) { grid-column: 2 / 3; grid-row: 3; }
   .audience-grid .audience-card:nth-child(6) { grid-column: 3 / 4; grid-row: 3; }
+  
+  /* Desktop-specific enhancements */
+  .chef-frame {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .video-container {
+    margin: 2rem 0;
+  }
 }
 
-/* Animations */
+/* ========================================
+   ANIMATIONS & MOTION
+======================================== */
+/* ========================================
+   ANIMATIONS & MOTION
+======================================== */
 @media (prefers-reduced-motion: no-preference) {
   .audience-card, .reason, .testimonial { opacity: 0; transform: translateY(20px); animation: fadeInUp 0.6s ease forwards; }
   .audience-card:nth-child(2) { animation-delay: 0.1s; }
@@ -226,7 +544,70 @@ footer { background: var(--primary-bg); border-top: 1px solid var(--border-color
   .reason:nth-child(3) { animation-delay: 0.4s; }
   .reason:nth-child(4) { animation-delay: 0.6s; }
   .reason:nth-child(5) { animation-delay: 0.8s; }
+  
+  /* Icon hover animations */
+  .platform-icon:hover .icon {
+    animation: iconBounce 0.3s ease;
+  }
+  
+  .audience-icon:hover .icon {
+    animation: iconPulse 0.4s ease;
+  }
 }
 
-@keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeInUp { 
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  } 
+}
 
+/* New icon animations */
+@keyframes iconBounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@keyframes iconPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+/* ========================================
+   UTILITY CLASSES FOR ICONS
+======================================== */
+
+/* Color utilities for icons */
+.icon-blue { stroke: var(--accent-blue); }
+.icon-purple { stroke: var(--accent-purple); }
+.icon-green { stroke: var(--accent-green); }
+.icon-muted { stroke: var(--secondary-text); }
+
+/* Icon fill variants (for icons that need fill instead of stroke) */
+.icon-filled {
+  fill: currentColor;
+  stroke: none;
+}
+
+/* Special icon containers */
+.icon-circle {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.icon-square {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  background: var(--accent-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
