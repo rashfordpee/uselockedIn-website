@@ -1,0 +1,547 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LockedIn - Stay Focused, Stay Productive</title>
+    <meta
+      name="description"
+      content="LockedIn Chrome Extension helps you stay focused by blocking distracting websites and creating productive focus sessions."
+    />
+    <meta
+      name="keywords"
+      content="productivity, focus, chrome extension, website blocker, time management"
+    />
+    <meta name="author" content="The Jiggy Designer" />
+
+    <!-- Security Headers (meta-level hints, server should also set these headers) -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo:wght@600;700;800&family=Exo+2:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Project styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="nav-container">
+        <div class="logo">LockedIn</div>
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Menu"
+          aria-expanded="false"
+        >
+          <span>☰</span>
+        </button>
+        <div class="nav-overlay" id="navOverlay">
+          <a href="#about">About</a>
+          <a href="#media" id="mediaLink">Media</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#chef" id="chefLink">Meet the Chef</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-text-container">
+          <div class="hero-main">You're not</div>
+          <div class="hero-main rotating-word" id="rotatingWord">wrong</div>
+          <div class="hero-main">to stay LockedIn</div>
+        </div>
+        <div class="hero-sub">
+          Just remember, once you're in, you're LockedIn!!!
+        </div>
+      </section>
+
+      <!-- What is LockedIn Section -->
+      <section id="about">
+        <h2 class="section-heading">WHAT IS LOCKED IN??</h2>
+        <div class="what-is-section">
+          <div class="what-is-content">
+            <p>
+              LockedIn is a powerful Chrome extension designed to help you
+              maintain laser focus during your work sessions. By blocking
+              distracting websites and providing structured focus sessions,
+              LockedIn ensures you stay productive and engaged with your tasks.
+            </p>
+            <p>
+              With built-in journaling features for reflection, LockedIn becomes
+              your personal productivity coach, helping you build better work
+              habits and achieve your goals.
+            </p>
+          </div>
+          <div class="what-is-image">Extension Preview</div>
+        </div>
+      </section>
+
+      <!-- Why Lock In Section -->
+      <section>
+        <div class="why-section">
+          <h2 class="section-heading">WHY LOCK IN??</h2>
+          <div class="reasons-grid">
+            <div class="reason">
+              <div class="reason-number">1</div>
+              <div class="reason-content">
+                <h3>Block AI Distractions</h3>
+                <p>
+                  Automatically blocks ChatGPT, Claude, and other AI tools
+                  during focus sessions to prevent mindless browsing and
+                  maintain deep work.
+                </p>
+              </div>
+            </div>
+            <div class="reason">
+              <div class="reason-number">2</div>
+              <div class="reason-content">
+                <h3>Structured Focus Sessions</h3>
+                <p>
+                  Create timed work sessions with clear goals and boundaries,
+                  helping you maintain concentration for optimal productivity.
+                </p>
+              </div>
+            </div>
+            <div class="reason">
+              <div class="reason-number">3</div>
+              <div class="reason-content">
+                <h3>Reflection Journaling</h3>
+                <p>
+                  Built-in journaling prompts help you reflect on your work
+                  sessions and identify patterns for continuous improvement.
+                </p>
+              </div>
+            </div>
+            <div class="reason">
+              <div class="reason-number">4</div>
+              <div class="reason-content">
+                <h3>Website Blocking</h3>
+                <p>
+                  Block distracting websites during focus sessions to maintain
+                  deep work and prevent mindless browsing.
+                </p>
+              </div>
+            </div>
+            <div class="reason">
+              <div class="reason-number">5</div>
+              <div class="reason-content">
+                <h3>Build Better Habits</h3>
+                <p>
+                  Track your focus sessions and build consistent work habits
+                  that compound over time for lasting productivity gains.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Who Should Lock In Section -->
+      <section class="who-section">
+        <h2 class="section-heading">WHO SHOULD LOCK IN?</h2>
+        <div class="audience-grid">
+          <div class="audience-card">
+            <div class="audience-icon">👥</div>
+            <h3>Everyone</h3>
+            <p>
+              Anyone looking to improve their focus and productivity in our
+              distraction-filled digital world.
+            </p>
+          </div>
+          <div class="audience-card">
+            <div class="audience-icon">💼</div>
+            <h3>Professionals</h3>
+            <p>
+              Business professionals who need deep focus for strategic thinking
+              and complex problem-solving.
+            </p>
+          </div>
+          <div class="audience-card">
+            <div class="audience-icon">✍️</div>
+            <h3>Writers & Creators</h3>
+            <p>
+              Content creators who need uninterrupted time for writing,
+              designing, and creative work.
+            </p>
+          </div>
+          <div class="audience-card">
+            <div class="audience-icon">📚</div>
+            <h3>Students</h3>
+            <p>
+              Students preparing for exams or working on important assignments
+              requiring sustained concentration.
+            </p>
+          </div>
+          <div class="audience-card">
+            <div class="audience-icon">💻</div>
+            <h3>Developers</h3>
+            <p>
+              Software developers who need uninterrupted coding sessions for
+              complex programming tasks.
+            </p>
+          </div>
+          <div class="audience-card">
+            <div class="audience-icon">🎯</div>
+            <h3>Goal Achievers</h3>
+            <p>
+              Ambitious individuals working toward specific goals who need
+              accountability and structure.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Available At Section -->
+      <section>
+        <h2 class="section-heading">AVAILABLE AT</h2>
+        <div class="platforms-grid">
+          <div class="platform-item">
+            <div
+              class="platform-icon"
+              onclick="window.open('https://chrome.google.com/webstore', '_blank')"
+              role="button"
+              tabindex="0"
+            >
+              <span style="color: #4285f4">🌐</span>
+            </div>
+            <span class="platform-name">Chrome</span>
+          </div>
+          <div class="platform-item">
+            <div
+              class="platform-icon"
+              onclick="window.open('https://microsoftedge.microsoft.com/addons', '_blank')"
+              role="button"
+              tabindex="0"
+            >
+              <span style="color: #0078d4">🔷</span>
+            </div>
+            <span class="platform-name">Edge</span>
+          </div>
+          <div class="platform-item">
+            <div
+              class="platform-icon"
+              onclick="window.open('https://addons.opera.com', '_blank')"
+              role="button"
+              tabindex="0"
+            >
+              <span style="color: #ff1b2d">⭕</span>
+            </div>
+            <span class="platform-name">Opera</span>
+          </div>
+          <div class="platform-item" style="justify-self: center">
+            <div class="platform-icon" role="button" tabindex="0">
+              <span style="color: #ff6900">🌏</span>
+            </div>
+            <span class="platform-name">UC Browser</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section>
+        <h2 class="section-heading">FREQUENTLY ASKED QUESTIONS</h2>
+        <div class="faq-container">
+          <!-- FAQ items (unchanged) -->
+          <div class="faq-item">
+            <button class="faq-question">
+              How do I install LockedIn?
+              <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Simply visit the Chrome Web Store, search for "LockedIn," and
+                click "Add to Chrome." The extension will be installed
+                automatically and ready to use.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              What permissions does LockedIn need?
+              <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                LockedIn requires tab access to monitor and block specific
+                websites during focus sessions. All data is stored locally on
+                your device for complete privacy and security.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Can I choose which sites are blocked?
+              <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes! LockedIn comes with common distracting sites
+                pre-configured, and you can add your own personal distractions
+                to the blocking list.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Is my data safe and private?
+              <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Absolutely. LockedIn stores all data locally on your device. No
+                personal information or browsing data is transmitted to external
+                servers.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              How long can focus sessions last?
+              <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Focus sessions can be customized from 15 minutes to several
+                hours, depending on your needs and work style. Most users find
+                25-50 minute sessions optimal.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Can I use LockedIn on mobile devices?
+              <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Currently, LockedIn is available as a browser extension for
+                desktop browsers. Mobile support is planned for future updates.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What People Think Section -->
+      <section id="reviews">
+        <h2 class="section-heading">WHAT PEOPLE THINK</h2>
+        <div class="testimonials-grid">
+          <div class="testimonial">
+            <p>
+              "LockedIn has transformed my work sessions. I finally have the
+              discipline to avoid AI rabbit holes during important tasks."
+            </p>
+            <strong>— Sarah K., Marketing Manager</strong>
+          </div>
+          <div class="testimonial">
+            <p>
+              "The reflection journaling feature helps me understand my
+              productivity patterns. It's like having a personal coach."
+            </p>
+            <strong>— David L., Software Developer</strong>
+          </div>
+          <div class="testimonial">
+            <p>
+              "Simple, effective, and exactly what I needed. My focus sessions
+              are now actually focused!"
+            </p>
+            <strong>— Maria R., Freelance Writer</strong>
+          </div>
+          <div class="testimonial">
+            <p>
+              "I was skeptical at first, but LockedIn genuinely helped me build
+              better work habits. Highly recommend!"
+            </p>
+            <strong>— Alex T., Student</strong>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Media Page Overlay -->
+    <div class="page-overlay" id="mediaPage">
+      <div class="page-header">
+        <h2>Media Gallery</h2>
+        <button class="close-btn" data-close="mediaPage" aria-label="Close">
+          ✕
+        </button>
+      </div>
+      <div class="page-content">
+        <p
+          style="
+            text-align: center;
+            color: var(--secondary-text);
+            margin-bottom: 2rem;
+          "
+        >
+          Videos and images showcasing the LockedIn extension in action
+        </p>
+
+        <div class="media-grid">
+          <div class="media-item">
+            <div class="video-placeholder">📹 Demo Video</div>
+            <div class="media-info">
+              <h3>LockedIn Extension Demo</h3>
+              <p>
+                See how LockedIn helps you stay focused during work sessions
+              </p>
+            </div>
+          </div>
+
+          <div class="media-item">
+            <div class="image-placeholder">🖼️ Screenshot</div>
+            <div class="media-info">
+              <h3>Extension Popup</h3>
+              <p>Clean and intuitive interface for starting focus sessions</p>
+            </div>
+          </div>
+
+          <div class="media-item">
+            <div class="video-placeholder">📹 Tutorial</div>
+            <div class="media-info">
+              <h3>Setup Tutorial</h3>
+              <p>Quick walkthrough on getting started with LockedIn</p>
+            </div>
+          </div>
+
+          <div class="media-item">
+            <div class="image-placeholder">🖼️ Feature</div>
+            <div class="media-info">
+              <h3>Focus Session View</h3>
+              <p>
+                What you see when LockedIn is actively blocking distractions
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Meet the Chef Page Overlay -->
+    <div class="page-overlay" id="chefPage">
+      <div class="page-header">
+        <h2>Meet the Chef</h2>
+        <button class="close-btn" data-close="chefPage" aria-label="Close">
+          ✕
+        </button>
+      </div>
+      <div class="page-content">
+        <div class="chef-profile">
+          <div class="chef-frame">
+            👨‍🍳
+            <div class="chef-hat">👨‍🍳</div>
+            <div class="chef-utensils ladle">🥄</div>
+            <div class="chef-utensils spoon">🍴</div>
+          </div>
+
+          <h2>The Jiggy Designer</h2>
+
+          <div class="chef-bio">
+            <p>
+              Hey there! I'm the creator behind LockedIn - your friendly
+              neighborhood productivity chef! When I'm not designing extensions
+              to help you stay focused, you'll find me cubing (yes, I solve
+              Rubik's cubes!), playing chess, or binge-watching comedy shows.
+            </p>
+            <p>
+              I believe productivity should be simple, effective, and maybe even
+              a little fun. That's why I "cooked up" LockedIn - to serve you the
+              perfect recipe for focus, one session at a time!
+            </p>
+          </div>
+
+          <div class="chef-links">
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >💼 LinkedIn</a
+            >
+            <a href="mailto:emmanuelraymondpal@gmail.com">📧 Email</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-bg-text">LOCKEDIN</div>
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="#about">LockedIn</a>
+          <a href=privacy.html>Privacy Policy</a>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+        </div>
+        <div class="platforms-grid" style="max-width: 500px; margin: 2rem auto">
+          <div class="platform-item">
+            <div
+              class="platform-icon"
+              onclick="window.open('https://chrome.google.com/webstore', '_blank')"
+              role="button"
+              tabindex="0"
+            >
+              <span style="color: #4285f4">🌐</span>
+            </div>
+            <span class="platform-name">Chrome</span>
+          </div>
+          <div class="platform-item">
+            <div
+              class="platform-icon"
+              onclick="window.open('https://microsoftedge.microsoft.com/addons', '_blank')"
+              role="button"
+              tabindex="0"
+            >
+              <span style="color: #0078d4">🔷</span>
+            </div>
+            <span class="platform-name">Edge</span>
+          </div>
+          <div class="platform-item">
+            <div
+              class="platform-icon"
+              onclick="window.open('https://addons.opera.com', '_blank')"
+              role="button"
+              tabindex="0"
+            >
+              <span style="color: #ff1b2d">⭕</span>
+            </div>
+            <span class="platform-name">Opera</span>
+          </div>
+          <div class="platform-item">
+            <div class="platform-icon" role="button" tabindex="0">
+              <span style="color: #ff6900">🌏</span>
+            </div>
+            <span class="platform-name">UC Browser</span>
+          </div>
+        </div>
+        <p>
+          If you love what I do, feel free to support me by
+          <a href="#" style="color: var(--accent-blue); text-decoration: none"
+            >showing love</a
+          >
+        </p>
+        <p style="margin-top: 2rem; color: var(--secondary-text)">
+          © The Jiggy Designer — All Rights Reserved
+        </p>
+      </div>
+    </footer>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+      🌙
+    </button>
+
+    <!-- Project script -->
+    <script src="main.js" defer></script>
+  </body>
+</html>

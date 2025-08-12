@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet the Chef - The Jiggy Designer | LockedIn</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Meet The Jiggy Designer, the creator behind LockedIn Chrome Extension. Learn about the passion and story behind productivity tools.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@600;700;800&family=Exo+2:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Additional styles specific to chef page */
+        .chef-hero {
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .chef-frame {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            margin: 2rem auto;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 8px solid var(--accent-blue);
+            box-shadow: var(--card-shadow);
+        }
+
+        /* REPLACE THIS WITH YOUR ACTUAL PROFILE IMAGE */
+        .chef-image {
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+            /* Replace with: background-image: url('images/profile-photo.jpg'); */
+            /* background-size: cover; */
+            /* background-position: center; */
+        }
+
+        /* Decorative kitchen utensils around the frame */
+        .chef-frame::before {
+            content: "🥄";
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            font-size: 2rem;
+            z-index: 1;
+            animation: wiggle 2s ease-in-out infinite;
+        }
+
+        .chef-frame::after {
+            content: "🍴";
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            font-size: 2rem;
+            z-index: 1;
+            animation: wiggle 2s ease-in-out infinite reverse;
+        }
+
+        /* Chef hat positioned diagonally */
+        .chef-hat {
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            font-size: 3rem;
+            z-index: 2;
+            animation: wiggle 3s ease-in-out infinite;
+            transform: rotate(15deg);
+        }
+
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(15deg); }
+            25% { transform: rotate(18deg) scale(1.05); }
+            50% { transform: rotate(12deg); }
+            75% { transform: rotate(16deg) scale(1.02); }
+        }
+
+        .chef-bio {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .chef-bio p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            color: var(--secondary-text);
+        }
+
+        .chef-bio h2 {
+            color: var(--primary-text);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .social-link {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--accent-blue);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: var(--transition);
+            box-shadow: var(--card-shadow);
+        }
+
+        .social-link:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 8px 25px -8px rgba(59, 130, 246, 0.4);
+        }
+
+        .back-button {
+            position: fixed;
+            top: 100px;
+            left: 2rem;
+            background: var(--accent-blue);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-family: 'Exo', sans-serif;
+            font-weight: 600;
+            transition: var(--transition);
+            z-index: 100;
+            box-shadow: var(--card-shadow);
+        }
+
+        .back-button:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 8px 25px -8px rgba(59, 130, 246, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .chef-frame {
+                width: 200px;
+                height: 200px;
+            }
+
+            .back-button {
+                position: static;
+                display: block;
+                width: fit-content;
+                margin: 2rem auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <div class="logo">LockedIn</div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+            <div class="nav-overlay" id="navOverlay">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="#media">Media</a>
+                <a href="index.html#reviews">Reviews</a>
+                <a href="chef.html">Meet the Chef</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <a href="index.html" class="back-button"> Back to Home</a>
+        
+        <section class="chef-hero">
+            <h1 class="hero-main">Meet the Chef</h1>
+            <p class="hero-sub">The creative mind behind LockedIn</p>
+            
+            <div class="chef-frame">
+                <!-- REPLACE THIS WITH YOUR ACTUAL PROFILE PHOTO -->
+                <div class="chef-image">👨‍💻</div>
+                <!-- Replace above div with: <img src="images/profile-photo.jpg" alt="The Jiggy Designer" class="chef-image" /> -->
+                
+                <div class="chef-hat">👨‍🍳</div>
+            </div>
+        </section>
+
+        <section class="chef-bio">
+            <h2>Hey there! I'm The Jiggy Designer</h2>
+            
+            <!-- CUSTOMIZE THIS ENTIRE BIOGRAPHY SECTION -->
+            <p>
+                Welcome to my digital kitchen! I'm a passionate developer and designer who believes that productivity 
+                tools should be as delightful as they are functional. Just like a chef crafts the perfect recipe, 
+                I craft digital experiences that help people stay focused and achieve their goals.
+            </p>
+            
+            <p>
+                The idea for LockedIn came from my own struggles with digital distractions. As someone who spends 
+                countless hours in front of a screen, I found myself constantly battling the urge to check AI tools, 
+                social media, and endless rabbit holes of information. I realized I needed a solution that was both 
+                powerful and simple – something that would keep me "locked in" to what truly mattered.
+            </p>
+            
+            <p>
+                When I'm not coding or designing, you can find me experimenting with new productivity techniques, 
+                reading about cognitive psychology, or actually cooking real food in my real kitchen! I believe 
+                that the best digital tools are those that help us live better lives offline.
+            </p>
+            
+            <p>
+                LockedIn represents my philosophy: <strong>focus is a superpower</strong>, and everyone deserves 
+                access to tools that help them harness it. Whether you're a student cramming for exams, a developer 
+                debugging complex code, or a creative working on your next masterpiece, LockedIn is here to help 
+                you stay in your zone.
+            </p>
+            
+            <h2>Why I Built LockedIn</h2>
+            
+            <p>
+                In our hyper-connected world, maintaining focus has become a rare skill. I wanted to create something 
+                that would help people reclaim their attention and direct it toward meaningful work. LockedIn isn't 
+                just another productivity app – it's a commitment to intentional living in the digital age.
+            </p>
+            
+            <p>
+                Every feature in LockedIn has been carefully crafted based on research in cognitive science and 
+                my own experience as someone who struggles with digital distractions. The reflection journaling, 
+                the customizable blocking, the focus sessions – they all work together to create a holistic 
+                approach to digital wellness.
+            </p>
+            
+            <p>
+                Thank you for being part of this journey. Your feedback and support mean the world to me, and 
+                I'm constantly working to make LockedIn better. Together, we're building a more focused, 
+                intentional digital world.
+            </p>
+            
+            <div class="social-links">
+                <!-- UPDATE THESE LINKS WITH YOUR ACTUAL PROFILES -->
+                <a href="https://linkedin.com/in/your-profile" target="_blank" class="social-link" aria-label="LinkedIn Profile">
+                    💼
+                    <!-- Replace emoji with: <img src="images/linkedin-icon.svg" alt="LinkedIn" /> -->
+                </a>
+                <a href="mailto:your-email@example.com" class="social-link" aria-label="Email Contact">
+                    ✉️
+                    <!-- Replace emoji with: <img src="images/email-icon.svg" alt="Email" /> -->
+                </a>
+                <!-- ADD MORE SOCIAL LINKS AS NEEDED -->
+                <a href="https://twitter.com/your-handle" target="_blank" class="social-link" aria-label="Twitter Profile">
+                    🐦
+                    <!-- Replace emoji with: <img src="images/twitter-icon.svg" alt="Twitter" /> -->
+                </a>
+            </div>
+        </section>
+
+        <!-- Optional: Add a call-to-action section -->
+        <section style="background: rgba(59, 130, 246, 0.05); border-radius: 24px; padding: 3rem 2rem; margin: 4rem auto; max-width: 800px; text-align: center;">
+            <h2>Want to Connect?</h2>
+            <p style="color: var(--secondary-text); margin-bottom: 2rem;">
+                I love hearing from LockedIn users! Whether you have feedback, questions, or just want to chat 
+                about productivity and focus, don't hesitate to reach out.
+            </p>
+            <a href="mailto:your-emmanuelraymondpal@gmail.com" style="display: inline-block; background: var(--accent-blue); color: white; padding: 1rem 2rem; border-radius: 25px; text-decoration: none; font-family: 'Exo', sans-serif; font-weight: 600; transition: var(--transition);">
+                Get in Touch
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-bg-text">CHEF</div>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">LockedIn</a>
+                <a href="/privacy.html">Privacy Policy</a>
+                <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
+            </div>
+            <p style="margin-top: 2rem; color: var(--secondary-text);">
+                © The Jiggy Designer — All Rights Reserved
+            </p>
+        </div>
+    </footer>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+
+    <script src="main.js"></script>
+</body>
+</html>
