@@ -235,7 +235,7 @@ section { padding: 4rem 1rem; max-width: 1200px; margin: 0 auto; }
 .reasons-grid { display: grid; gap: 3rem; margin-top: 3rem; }
 
 .reason { display: flex; align-items: flex-start; gap: 1.5rem; padding: 2rem; background: var(--primary-bg); border-radius: 16px; box-shadow: var(--card-shadow); }
-.reason:nth-child(even) { flex-direction: row-reverse; text-align: right; }
+.reason:nth-child(even) { flex-direction: row; text-align: left; }
 
 .reason-number { width: 60px; height: 60px; border-radius: 50%; background: var(--accent-blue); color: white; display: flex; align-items: center; justify-content: center; font-family: 'Exo', sans-serif; font-weight: 800; font-size: 1.5rem; flex-shrink: 0; }
 
